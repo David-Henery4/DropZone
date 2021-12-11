@@ -20,7 +20,7 @@ body {
 
 .wrapper {
   color: #f1b61c;
-  background-image: url(/images\ &\ svgs/CalderaBackGroundSVG.svg);
+  background-image: url(images\ &\ svgs/CalderaBackGroundSVG.svg);
   height: 100%;
   width: 100%;
   background-size: 100vh;
