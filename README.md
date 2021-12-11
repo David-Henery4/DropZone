@@ -1,2 +1,0 @@
-# DropZone
-DropZone Location Generator
