@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+      />
+      <!--******-->
+      <!-- ICONS -->
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous"
+    />
+    <!--******-->
+    <!-- LINKS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Script -->
+    <script defer src="main.js"></script>
+    <!--******-->
+    <title>DropZone</title>
+  </head>
+  <!-- ******************* -->
+  <body>
+    <!-- SideMenu -->
+    <div id="mySidenav" class="sidenav">
+      <img
+        class="close-side"
+        src="images & svgs/Close-IconCaldera.svg"
+        alt="close"
+      />
+      <p class="side-logo">
+        <span class="side-span">D</span>rop<span class="side-span">Z</span>one
+      </p>
+      <a href="#box-one">What is DropZone?</a>
+      <a href="#box-two">Features</a>
+      <a href="#box-three">No Repeat option</a>
+    </div>
+    <!-- MAIN WRAPPER -->
+    <div id="shade"></div>
+    <div class="wrapper">
+      <!-- NAV-Small-SCREEN -->
+      <div class="mobile-nav">
+        <img
+          id="nav-svg"
+          src="images & svgs/nav design Cladera SVG.svg"
+          alt=""
+        />
+        <!-- Burg -->
+        <input
+          type="checkbox"
+          id="checkbox1"
+          class="checkbox1 visuallyHidden"
+        />
+        <label for="checkbox1">
+          <div class="hamburger hamburger1">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+            <span class="bar bar4"></span>
+          </div>
+        </label>
+      </div>
+      <!-- ****** -->
+      <!--**********-->
+      <!-- NAV-BIG-SCREEN -->
+      <nav class="nav-bar">
+        <div class="L-side">
+          <p class="logo">DropZone</p>
+        </div>
+
+        <div class="R-side">
+          <a href="#box-one">What is DropZone?</a>
+          <a href="#box-two">Features</a>
+          <a href="#box-three">No Repeat Option</a>
+        </div>
+      </nav>
+      <!--*******-->
+      <!-- MAIN SCECTION -->
+
+      <section class="main">
+        <div class="head-section flex">
+          <h1 class="main-head">Dropzone Generator</h1>
+          <h3 class="map-name glitch">Caldera</h3>
+        </div>
+
+        <!-- *** -->
+        <!-- Map & Drop-Location -->
+
+        <div class="main-content con-space flex">
+          <!-- ******** -->
+
+          <!-- **MAP OPTIONS FLIP** -->
+          <div class="flip-card" id="card-size">
+            <div class="flip-card-inner">
+              <!-- *Card-front* -->
+              <div id="flip-card-shade" class="flip-card-front">
+                <img
+                  id="map-img-shade"
+                  class="map-img"
+                  src="images & svgs/Caldera-Map-four.jpg"
+                  alt="Caldera"
+                />
+                <!-- Drop box -->
+                <div id="dropContainer" class="drop flex dropHide">
+                  <div id="text" class="drop-text"></div>
+                </div>
+              </div>
+              <!-- *Card Back* -->
+              <div class="flip-card-back">
+                <div class="custom-options">
+                  <!-- Options-Container -->
+                  <div class="options-container">
+                    <div class="options-top">
+                      <h1 class="options-header">Default Drop Locations</h1>
+
+                      <!-- ***options-Toggles***-->
+                      <div class="toggles">
+                        <div class="togg">
+                          <input
+                            type="checkbox"
+                            class="checkbox"
+                            id="switch-one"
+                            onchange="checkAll(this)"
+                          />
+                          <label for="switch-one" class="toggle"></label>
+                          <label class="toggle-label" for="switch-one"
+                            >Select/Deselect All</label
+                          >
+                        </div>
+                        <!--*****-->
+                        <div class="togg">
+                          <input
+                            type="checkbox"
+                            class="checkbox"
+                            id="switch-two"
+                            unchecked
+                          />
+                          <label for="switch-two" class="toggle"></label>
+                          <label class="toggle-label" for=""
+                            >Remove Previous Drop</label
+                          >
+                        </div>
+                      </div>
+                      <!--***** -->
+                      <!-- CHECKBOX DEFAULT LOCATIONS -->
+                      <div class="checkboxes" id="checkbox-container">
+                        <!-- <label class="check-container"
+                      >Airport
+                      <input type="checkbox" checked="checked" />
+                      <span class="checkmark"></span>
+                      </label> -->
+                      </div>
+                      <!-- ** -->
+                    </div>
+                    <!--*****-->
+                    <!-- OPTION PAGE BOTTOM -->
+                    <div class="options-bottom">
+                      <h4 class="custom-heading">Custom Drops</h4>
+                      <!-- Form -->
+                      <!-- inputs -->
+                      <!-- Input tainer one -->
+                      <div class="input-tainer-one flex">
+                        <!-- ** -->
+                        <div class="form-tainer">
+                          <form autocomplete="off" class="input-form" action="">
+                            <input type="text" name="custom-input" required />
+                            <div class="underline"></div>
+                            <label for="">Custom Drop #1</label>
+                          </form>
+                          <!-- ** -->
+                          <form autocomplete="off" class="input-form" action="">
+                            <input type="text" name="custom-input" required />
+                            <div class="underline"></div>
+                            <label for="">Custom Drop #2</label>
+                          </form>
+                          <!-- ** -->
+                          <!-- <form class="input-form" action="">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label for="">Custom Drop #3</label>
+                          </form> -->
+                          <!-- ** -->
+                        </div>
+                        <!-- ** -->
+                      </div>
+                      <!-- **** -->
+                      <!-- Input Tainer two -->
+                      <div class="input-tainer-two flex">
+                        <div class="form-tainer">
+                          <form autocomplete="off" class="input-form" action="">
+                            <input type="text" name="custom-input" required />
+                            <div class="underline"></div>
+                            <label for="">Custom Drop #3</label>
+                          </form>
+                          <!-- ** -->
+                          <form autocomplete="off" class="input-form" action="">
+                            <input type="text" name="custom-input" required />
+                            <div class="underline"></div>
+                            <label for="">Custom Drop #4</label>
+                          </form>
+                          <!-- ** -->
+                          <!-- <form class="input-form" action="">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label for="">Custom Drop #3</label>
+                          </form> -->
+                          <!-- ** -->
+                        </div>
+                        <!-- ** -->
+                      </div>
+                      <!-- ***** -->
+                      <!-- Option Buttons -->
+                      <button id="submitBtn" class="option-buttons">
+                        Submit
+                      </button>
+                      <button
+                        id="continue-btn"
+                        class="option-buttons opt-butt-two"
+                      >
+                        Continue
+                      </button>
+                      <div class="comfirmed-icon">
+                        <i class="fas fa-check-circle"></i>
+                      </div>
+                      <p class="no_input-text">Enter Custom Drop!</p>
+                      <!-- ***** -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ** -->
+            </div>
+          </div>
+          <!-- *********** -->
+          <!-- ** BUTTONS ** -->
+          <div class="buttons flex">
+            <button class="butt-styles randomBtn">Random Drop</button>
+            <button class="butt-styles customBtn">
+              Custom Drops & Features
+            </button>
+            <button class="butt-styles resetBtn">Reset</button>
+          </div>
+        </div>
+        <!---->
+        <!-- ** INFO-SECTION ** -->
+        <div class="info-section">
+          <div id="box-one" class="box flex">
+            <i class="far fa-question-circle icons fa-3x"></i>
+            <!-- BOX BODY!!!! -->
+            <h4 class="box-heading">What is DropZone?</h4>
+            <p class="info-text">
+              Dropzone is a random locaction generator that will help you and
+              your squad decide where to drop in Warzone.
+            </p>
+          </div>
+          <!---->
+          <div id="box-two" class="box flex">
+            <i id="feat-icon" class="fas fa-cogs fa-3x icons"></i>
+            <h4 id="feat-head" class="box-heading">Features</h4>
+            <p class="info-text feat-top-p">
+              There are a few features here that will help you customise your
+              pool of drop locactions. Just click on the 'Custom Drops &
+              Features' button above to customise your drops.
+            </p>
+            <p class="info-text feat-bott-p">
+              There is also no custom location limit, meaning you can have as
+              many as you want. You can even remove all default locations and
+              replace them with customs.
+            </p>
+          </div>
+          <!---->
+          <div id="box-three" class="box flex">
+            <i class="fas fa-info fa-3x icons"></i>
+            <!-- <div class="box-body">
+            </div> -->
+            <h4 class="box-heading">No Repeat Option</h4>
+            <p class="info-text">
+              This feature will allow you to create random drops without any
+              duplictes and will stop when you run out of drop locactions. You
+              then have to press 'Reset' to start again. The toggle for this is
+              in the features section.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!---->
+      <footer class="foot flex">
+        <p>All trademarks and the image appearing on this website are the property of their respective owners</p>
+      </footer>
+    </div>
+    <!--*******-->
+    <!--*******-->
+  </body>
+</html>
